@@ -103,17 +103,21 @@ public class Inventory implements CommandExecutor {
                     p.sendMessage("§e§lCustomGUI §r§8» §7Invalid arguments. Please use: §4/inventory edit <command / gui / name>");
                 }
             } else if(args[0].toLowerCase(Locale.ROOT).equals("create")) {
-                if(args.length >= 3) {
-                    if(isNumeric(args[2])) {
-                        Integer size = Integer.parseInt(args[2]);
-                        org.bukkit.inventory.Inventory inv = Bukkit.createInventory(null, size);
+                if(p.hasPermission("guimaker.edit_gui") || p.hasPermission("guimaker.*") || p.isOp()) {
+                    if (args.length >= 3) {
+                        if (isNumeric(args[2])) {
+                            Integer size = Integer.parseInt(args[2]);
+                            org.bukkit.inventory.Inventory inv = Bukkit.createInventory(null, size);
 
-                        ConfigInventory.saveInventory(inv, args[1].toLowerCase(Locale.ROOT).replace(".","_"));
+                            ConfigInventory.saveInventory(inv, args[1].toLowerCase(Locale.ROOT).replace(".", "_"));
+                        } else {
+                            p.sendMessage("§e§lCustomGUI §r§8» §7Invalid arguments. Please use: §4/inventory create <inventory-name> §7(Please use an integer.) --> §4<size-of-inventory>");
+                        }
                     } else {
-                        p.sendMessage("§e§lCustomGUI §r§8» §7Invalid arguments. Please use: §4/inventory create <inventory-name> §7(Please use an integer.) --> §4<size-of-inventory>");
+                        p.sendMessage("§e§lCustomGUI §r§8» §7Invalid arguments. Please use: §4/inventory create <inventory-name> <size-of-inventory>");
                     }
                 } else {
-                    p.sendMessage("§e§lCustomGUI §r§8» §7Invalid arguments. Please use: §4/inventory create <inventory-name> <size-of-inventory>");
+                    p.sendMessage("§e§lCustomGUI §r§8» §4You don't have the permissions to do that.");
                 }
             } else if(args[0].toLowerCase(Locale.ROOT).equals("item")) {
                 p.sendMessage("§e§lCustomGUI §r§8» §7This function is coming soon.");
