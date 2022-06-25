@@ -1,5 +1,8 @@
 # CustomGUIMaker
 
+* Create your own GUIs with CustomGUIMaker. Unlimited GUIs, own commands and easy use!
+* This plugin is for **Bukkit / Spigot / Paper** servers and for the **minecraft version 1.19**. 
+
 # Commands
 
 ### `/gui` & `/inventory`
