@@ -1,0 +1,340 @@
+gui:
+  text_board:
+    size: 54
+    name: §f§lText Board
+    '0':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '1':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '2':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '3':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '4':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '5':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '6':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '7':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '8':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '9':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '10':
+      material: SNOWBALL
+      name: §f§lGreetings
+      lore: '§7This item text a message in the public chat: #SPLIT# §8→ §8"§fHello.
+        How are you?§8"'
+      command: Hello. How are you?
+    '11':
+      material: SNOWBALL
+      name: §f§lGreetins back
+      lore: '§7This item text a message in the public chat: #SPLIT# §8→ §8"§fI am
+        fine, thanks. And what about you?§8"'
+      command: I am fine, thanks. And what about you?
+    '12':
+      material: SNOWBALL
+      name: §f§lOkay
+      lore: '§7This item text a message in the public chat: #SPLIT# §8→ §8"§fOkay,
+        got it!§8"'
+      command: Okay, got it!
+    '13':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '14':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '15':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '16':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '17':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '18':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '19':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '20':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '21':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '22':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '23':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '24':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '25':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '26':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '27':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '28':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '29':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '30':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '31':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '32':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '33':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '34':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '35':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '36':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '37':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '38':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '39':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '40':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '41':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '42':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '43':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '44':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '45':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '46':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '47':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '48':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '49':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '50':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '51':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '52':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '53':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+  time:
+    size: 27
+    name: §e§lTime Changer
+    '0':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '1':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '2':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '3':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '4':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '5':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '6':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '7':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '8':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '9':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '10':
+      material: DAYLIGHT_DETECTOR
+      name: '§r§f§lMidnight'
+      lore: '§7Set the time to #SPLIT# §8→ §fMidnight'
+      command: /time set 9000
+    '11':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '12':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '13':
+      material: DAYLIGHT_DETECTOR
+      name: '§r§f§lSunrise'
+      lore: '§7Set the time to #SPLIT# §8→ §fSunrise'
+      command: /time set 230000
+    '14':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '15':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '16':
+      material: DAYLIGHT_DETECTOR
+      name: '§r§f§lAfternoon'
+      lore: '§7Set the time to #SPLIT# §8→ §fAfternoon'
+      command: /time set 18000
+    '17':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '18':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '19':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '20':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '21':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '22':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '23':
+      material: GRAY_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '24':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '25':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
+    '26':
+      material: BLACK_STAINED_GLASS_PANE
+      name: '§r'
+      lore: '#EMPTY#'
