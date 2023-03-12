@@ -1,0 +1,3 @@
+language: 'english' # english / german / minecraft
+send-messages: 'true' # true / false
+tab-completer: 'true' # true / false

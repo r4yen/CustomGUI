@@ -1,0 +1,10 @@
+name: CustomGUIMaker
+version: '${project.version}'
+main: customguimaker.customguimaker.CustomGUIMaker
+api-version: 1.13
+authors: [ NeverAfK ]
+description: CustomGUIMaker
+commands:
+  inventory:
+    description: Open/Edit/Setup Inventory GUIs
+    aliases: gui
