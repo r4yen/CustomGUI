@@ -1,7 +1,7 @@
 # CustomGUIMaker
 
 * Create your own GUIs with CustomGUIMaker. Unlimited GUIs, own commands and easy use!
-* This plugin is for **Bukkit / Spigot / Paper** servers and for the **minecraft version 1.19**. 
+* This plugin is for **Bukkit / Spigot / Paper** (bukkit based) servers and for the **minecraft versions 1.8.x - 1.19.x**. 
 
 # Commands
 
@@ -34,37 +34,51 @@
 
 
 ### ``/inventory item lore add <text>``
-* Add a line to the item you hold in your hand (Coming soon). **since Version 2.0** <br>
+* Add a line to the item you hold in your hand. **since Version 2.0** <br>
 
 
 ### ``/inventory item lore clear``
-* Clear the lore of the item you hold in your hand (Coming soon). **since Version 2.0** <br>
+* Clear the lore of the item you hold in your hand. **since Version 2.0** <br>
 
 
 ### ``/inventory item name <text>``
-* Rename the item that you hold in your hand (Coming soon). **since Version 2.0**
+* Rename the item that you hold in your hand. **since Version 2.0** <br>
+
 
 # Permissions
   
 ### ``Without permissions``
-* /inventory open <...> <br>
+* /inventory open <gui> <br>
   
 ### ``guimaker.edit_name``
-* /inventory edit name <...> <br>
+* /inventory edit name <gui> <name> <br>
 
 ### ``guimaker.edit_command``
-* /inventory edit command <...> <br>
+* /inventory edit command <gui> <slot> <command> <br>
 
 ### ``guimaker.edit_gui``
-* /inventory edit gui <...>
-* /inventory create <...>
-* /inventory delete <...> (Coming soon) <br>
-* 
+* /inventory edit command <gui> <slot> <command>
+* /inventory edit name <gui> <name>
+* /inventory edit gui <gui> <br>
+
 ### ``guimaker.items``
-* /inventory item <...> <br>
+* /inventory item lore add <text>
+* /inventory item lore clear
+* /inventory item name <text> <br>
 
 ### ``guimaker.*`` / ``Server-Operator``
-* /inventory create <...>
-* /inventory edit <...>
-* /inventory item <...> (Coming soon)
-* /inventory delete <...> (Coming soon)
+* /inventory create <name> <size>
+
+* /inventory edit command <gui> <slot> <command>
+* /inventory edit name <gui> <name>
+* /inventory edit gui <gui>
+
+* /inventory delete <gui>
+
+* /inventory open <gui>
+  
+* /inventory list
+  
+* /inventory item lore add <text>
+* /inventory item lore clear
+* /inventory item name <text>
