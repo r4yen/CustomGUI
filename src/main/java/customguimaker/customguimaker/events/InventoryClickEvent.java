@@ -1,7 +1,7 @@
-package customguimaker.customguimaker.events;
+package customgui.customgui.events;
 
-import customguimaker.customguimaker.ConfigInventory;
-import customguimaker.customguimaker.CustomGUIMaker;
+import customgui.customgui.ConfigInventory;
+import customgui.customgui.CustomGUI;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -17,7 +17,7 @@ public class InventoryClickEvent implements Listener {
 
             Integer slot = event.getSlot();
 
-            String command = ConfigInventory.getConfigCommand(CustomGUIMaker.currentInventory.get(p), slot);
+            String command = ConfigInventory.getConfigCommand(CustomGUI.currentInventory.get(p), slot);
 
             customguimaker.customguimaker.Player.sendCommand(p, command);
         }
