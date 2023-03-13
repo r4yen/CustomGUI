@@ -3,7 +3,7 @@ version: '${project.version}'
 main: customgui.customgui.CustomGUI
 api-version: 1.13
 authors: [ NeverAfK ]
-description: CustomGUIMaker
+description: CustomGUI
 commands:
   inventory:
     description: Open/Edit/Setup Inventory GUIs or edit Items.
