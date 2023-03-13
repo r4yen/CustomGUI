@@ -1,16 +1,10 @@
 package customgui.customgui;
 
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class ConfigInventory {
 
@@ -25,9 +19,7 @@ public class ConfigInventory {
     }
 
     public static ItemStack getConfigItem(String inventory, Integer slot) {
-        ItemStack item = CustomGUI.Instance.getInventoriesConfig().getItemStack("gui." + inventory + "." + slot + ".item");
-
-        return item;
+        return CustomGUI.Instance.getInventoriesConfig().getItemStack("gui." + inventory + "." + slot + ".item");
     }
 
     public static void setConfigCommand(String inventory, Integer slot, String command) {
@@ -41,9 +33,7 @@ public class ConfigInventory {
     }
 
     public static String getConfigCommand(String inventory, Integer slot) {
-        String command = CustomGUI.Instance.getInventoriesConfig().getString("gui." + inventory + "." + slot + ".command");
-
-        return command;
+        return CustomGUI.Instance.getInventoriesConfig().getString("gui." + inventory + "." + slot + ".command");
     }
 
     public static void setConfigGuiName(String inventory, String name) {
@@ -57,9 +47,7 @@ public class ConfigInventory {
     }
 
     public static String getConfigGuiName(String inventory) {
-        String name = CustomGUI.Instance.getInventoriesConfig().getString("gui." + inventory + ".name");
-
-        return name;
+        return CustomGUI.Instance.getInventoriesConfig().getString("gui." + inventory + ".name");
     }
     public static void setConfigGuiSize(String inventory, Integer size) {
         CustomGUI.Instance.getInventoriesConfig().set("gui." + inventory + ".size", size);
@@ -72,9 +60,7 @@ public class ConfigInventory {
     }
 
     public static Integer getConfigGuiSize(String inventory) {
-        Integer size = CustomGUI.Instance.getInventoriesConfig().getInt("gui." + inventory + ".size");
-
-        return size;
+        return CustomGUI.Instance.getInventoriesConfig().getInt("gui." + inventory + ".size");
     }
 
     public static void saveInventory(Inventory inventory, String name) {
@@ -97,17 +83,6 @@ public class ConfigInventory {
             setConfigItem(name, slot, s);
             slot++;
         }
-    }
-
-    public static Inventory getInventory(String name) {
-        Inventory inventory = Bukkit.createInventory(null, getConfigGuiSize(name), getConfigGuiName(name));
-
-        for(int i = 0; i <= getConfigGuiSize(name) - 1; i++)
-        {
-            inventory.setItem(i, getConfigItem(name, i));
-        }
-
-        return inventory;
     }
 
     public static Inventory getInventory(String name, String beforeGuiName, String afterGuiName) {
