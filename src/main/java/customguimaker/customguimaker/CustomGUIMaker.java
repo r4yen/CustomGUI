@@ -1,9 +1,9 @@
-package customguimaker.customguimaker;
+package customgui.customgui;
 
-import customguimaker.customguimaker.commands.Inventory;
-import customguimaker.customguimaker.commands.InventoryTAB;
-import customguimaker.customguimaker.events.InventoryClickEvent;
-import customguimaker.customguimaker.events.InventoryCloseEvent;
+import customgui.customgui.commands.Inventory;
+import customgui.customgui.commands.InventoryTAB;
+import customgui.customgui.events.InventoryClickEvent;
+import customgui.customgui.events.InventoryCloseEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Locale;
 
-public final class CustomGUIMaker extends JavaPlugin {
+public final class CustomGUI extends JavaPlugin {
     public static CustomGUIMaker Instance = null;
 
     public static HashMap<Player, String> editInventory = new HashMap<Player, String>();
