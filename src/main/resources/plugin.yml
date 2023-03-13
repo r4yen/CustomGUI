@@ -1,6 +1,6 @@
-name: CustomGUIMaker
+name: CustomGUI
 version: '${project.version}'
-main: customguimaker.customguimaker.CustomGUIMaker
+main: customgui.customgui.CustomGUI
 api-version: 1.13
 authors: [ NeverAfK ]
 description: CustomGUIMaker
