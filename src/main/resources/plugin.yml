@@ -2,7 +2,7 @@ name: CustomGUI
 version: '${project.version}'
 main: customgui.customgui.CustomGUI
 api-version: 1.13
-authors: [ NeverAfK ]
+authors: [ rayen ]
 description: CustomGUI
 commands:
   inventory:
