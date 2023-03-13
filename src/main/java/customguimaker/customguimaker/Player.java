@@ -1,4 +1,4 @@
-package customguimaker.customguimaker;
+package customgui.customgui;
 
 public class Player {
 
