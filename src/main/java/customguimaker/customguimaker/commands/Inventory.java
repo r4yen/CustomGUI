@@ -1,7 +1,7 @@
-package customguimaker.customguimaker.commands;
+package customgui.customgui.commands;
 
-import customguimaker.customguimaker.ConfigInventory;
-import customguimaker.customguimaker.CustomGUIMaker;
+import customgui.customgui.ConfigInventory;
+import customgui.customgui.CustomGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -28,18 +28,18 @@ public class Inventory implements CommandExecutor {
                         org.bukkit.inventory.Inventory inv = ConfigInventory.getInventory(args[1].toLowerCase(Locale.ROOT), "§r", "§r");
 
                         p.openInventory(inv);
-                        if(CustomGUIMaker.sendMessages) {
+                        if(CustomGUI.sendMessages) {
                             p.sendMessage(getMessage("opened_inventory").replace("{0}", args[1].toLowerCase(Locale.ROOT)));
                         }
 
-                        CustomGUIMaker.currentInventory.put(p, args[1].toLowerCase(Locale.ROOT));
+                        CustomGUI.currentInventory.put(p, args[1].toLowerCase(Locale.ROOT));
                     } else {
-                        if(CustomGUIMaker.sendMessages) {
+                        if(CustomGUI.sendMessages) {
                             p.sendMessage(getMessage("inventory_not_exists"));
                         }
                     }
                 } else {
-                    if(CustomGUIMaker.sendMessages) {
+                    if(CustomGUI.sendMessages) {
                         p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory open <inventory>"));
                     }
                 }
@@ -58,21 +58,21 @@ public class Inventory implements CommandExecutor {
                                         cmd = cmd.replace("&", "§");
 
                                         ConfigInventory.setConfigCommand(args[2].toLowerCase(Locale.ROOT), Integer.parseInt(args[3]) - 1, cmd);
-                                        if(CustomGUIMaker.sendMessages) {
+                                        if(CustomGUI.sendMessages) {
                                             p.sendMessage(getMessage("set_command").replace("{0}", args[2].toLowerCase(Locale.ROOT)).replace("{1}", args[3]).replace("{2}", cmd));
                                         }
                                     } else {
-                                        if(CustomGUIMaker.sendMessages) {
+                                        if(CustomGUI.sendMessages) {
                                             p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory edit command <inventory> <slot> <command>"));
                                         }
                                     }
                                 } else {
-                                    if(CustomGUIMaker.sendMessages) {
+                                    if(CustomGUI.sendMessages) {
                                         p.sendMessage(getMessage("inventory_not_exists"));
                                     }
                                 }
                             } else {
-                                if(CustomGUIMaker.sendMessages) {
+                                if(CustomGUI.sendMessages) {
                                     p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory edit command <inventory> <slot> <command>"));
                                 }
                             }
@@ -84,19 +84,19 @@ public class Inventory implements CommandExecutor {
                                     org.bukkit.inventory.Inventory inv = ConfigInventory.getInventory(args[2].toLowerCase(Locale.ROOT), "§r", " §8(Editor)");
 
                                     p.openInventory(inv);
-                                    CustomGUIMaker.editInventory.put(p, args[2].toLowerCase(Locale.ROOT));
+                                    CustomGUI.editInventory.put(p, args[2].toLowerCase(Locale.ROOT));
                                 } else {
-                                    if(CustomGUIMaker.sendMessages) {
+                                    if(CustomGUI.sendMessages) {
                                         p.sendMessage(getMessage("inventory_not_exists"));
                                     }
                                 }
                             } else {
-                                if(CustomGUIMaker.sendMessages) {
+                                if(CustomGUI.sendMessages) {
                                     p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory edit gui <inventory>"));
                                 }
                             }
                         } else {
-                            if(CustomGUIMaker.sendMessages) {
+                            if(CustomGUI.sendMessages) {
                                 p.sendMessage(getMessage("no_permission"));
                             }
                         }
@@ -113,31 +113,31 @@ public class Inventory implements CommandExecutor {
 
                                     ConfigInventory.setConfigGuiName(args[2].toLowerCase(Locale.ROOT), name);
 
-                                    if(CustomGUIMaker.sendMessages) {
+                                    if(CustomGUI.sendMessages) {
                                         p.sendMessage(getMessage("gui_name_set").replace("{0}", args[2].toLowerCase(Locale.ROOT)).replace("{1}", name));
                                     }
                                 } else {
-                                    if(CustomGUIMaker.sendMessages) {
+                                    if(CustomGUI.sendMessages) {
                                         p.sendMessage(getMessage("inventory_not_exists"));
                                     }
                                 }
                             } else {
-                                if(CustomGUIMaker.sendMessages) {
+                                if(CustomGUI.sendMessages) {
                                     p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory edit name <inventory> <name>"));
                                 }
                             }
                         } else {
-                            if(CustomGUIMaker.sendMessages) {
+                            if(CustomGUI.sendMessages) {
                                 p.sendMessage(getMessage("no_permission"));
                             }
                         }
                     } else {
-                        if(CustomGUIMaker.sendMessages) {
+                        if(CustomGUI.sendMessages) {
                             p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory edit <command / gui / name>"));
                         }
                     }
                 } else {
-                    if(CustomGUIMaker.sendMessages) {
+                    if(CustomGUI.sendMessages) {
                         p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory edit <command / gui / name>"));
                     }
                 }
@@ -153,17 +153,17 @@ public class Inventory implements CommandExecutor {
 
                             p.sendMessage(getMessage("inventory_created").replace("{0}", args[1].toLowerCase(Locale.ROOT).replace(".", "_")));
                         } else {
-                            if(CustomGUIMaker.sendMessages) {
+                            if(CustomGUI.sendMessages) {
                                 p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory create <inventory-name> <size-of-inventory>"));
                             }
                         }
                     } else {
-                        if(CustomGUIMaker.sendMessages) {
+                        if(CustomGUI.sendMessages) {
                             p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory create <inventory-name> <size-of-inventory>"));
                         }
                     }
                 } else {
-                    if(CustomGUIMaker.sendMessages) {
+                    if(CustomGUI.sendMessages) {
                         p.sendMessage(getMessage("no_permission"));
                     }
                 }
@@ -193,19 +193,19 @@ public class Inventory implements CommandExecutor {
                                     ItemMeta meta = p.getItemInHand().getItemMeta();
                                     meta.setDisplayName("§r");
                                     p.getItemInHand().setItemMeta(meta);
-                                    if (CustomGUIMaker.sendMessages) {
+                                    if (CustomGUI.sendMessages) {
                                         p.sendMessage(getMessage("item_name_renamed").replace("{0}", "§r"));
                                     }
                                 } else {
                                     ItemMeta meta = p.getItemInHand().getItemMeta();
                                     meta.setDisplayName(name);
                                     p.getItemInHand().setItemMeta(meta);
-                                    if (CustomGUIMaker.sendMessages) {
+                                    if (CustomGUI.sendMessages) {
                                         p.sendMessage(getMessage("item_name_renamed").replace("{0}", name));
                                     }
                                 }
                             } else {
-                                if (CustomGUIMaker.sendMessages) {
+                                if (CustomGUI.sendMessages) {
                                     p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory item name <name>"));
                                 }
                             }
@@ -256,27 +256,27 @@ public class Inventory implements CommandExecutor {
 
                                     p.sendMessage(getMessage("item_lore_cleared"));
                                 } else {
-                                    if (CustomGUIMaker.sendMessages) {
+                                    if (CustomGUI.sendMessages) {
                                         p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory item lore <add / clear>"));
                                     }
                                 }
                             } else {
-                                if (CustomGUIMaker.sendMessages) {
+                                if (CustomGUI.sendMessages) {
                                     p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory item lore <add / clear>"));
                                 }
                             }
                         } else {
-                            if (CustomGUIMaker.sendMessages) {
+                            if (CustomGUI.sendMessages) {
                                 p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory item <name / lore>"));
                             }
                         }
                     } else {
-                        if (CustomGUIMaker.sendMessages) {
+                        if (CustomGUI.sendMessages) {
                             p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory item <name / lore>"));
                         }
                     }
                 } else {
-                    if(CustomGUIMaker.sendMessages) {
+                    if(CustomGUI.sendMessages) {
                         p.sendMessage(getMessage("no_permission"));
                     }
                 }
@@ -285,31 +285,31 @@ public class Inventory implements CommandExecutor {
                     if(p.hasPermission("guimaker.edit_gui") || p.hasPermission("guimaker.*") || p.isOp()) {
                         InventoryTAB.allInventories(null);
                         if (InventoryTAB.allInventories("").contains(args[1].toLowerCase(Locale.ROOT))) {
-                            CustomGUIMaker.Instance.getInventoriesConfig().set("gui." + args[1].toLowerCase(Locale.ROOT), null);
+                            CustomGUI.Instance.getInventoriesConfig().set("gui." + args[1].toLowerCase(Locale.ROOT), null);
                             try {
-                                CustomGUIMaker.Instance.getInventoriesConfig().save(CustomGUIMaker.inventoriesFile);
+                                CustomGUI.Instance.getInventoriesConfig().save(CustomGUI.inventoriesFile);
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
 
                             p.sendMessage(getMessage("inventory_deleted").replace("{0}", args[1].toLowerCase(Locale.ROOT)));
                         } else {
-                            if (CustomGUIMaker.sendMessages) {
+                            if (CustomGUI.sendMessages) {
                                 p.sendMessage(getMessage("inventory_not_exists"));
                             }
                         }
                     } else {
-                        if(CustomGUIMaker.sendMessages) {
+                        if(CustomGUI.sendMessages) {
                             p.sendMessage(getMessage("no_permission"));
                         }
                     }
                 } else {
-                    if(CustomGUIMaker.sendMessages) {
+                    if(CustomGUI.sendMessages) {
                         p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory delete <inventory>"));
                     }
                 }
             } else if(args[0].toLowerCase(Locale.ROOT).equals("list")) {
-                if(CustomGUIMaker.sendMessages) {
+                if(CustomGUI.sendMessages) {
                     List<String> inventories = InventoryTAB.allInventories(null);
 
                     String inv = getMessage("no_inventories");
@@ -325,12 +325,12 @@ public class Inventory implements CommandExecutor {
                     p.sendMessage(getMessage("inventory_list").replace("{0}", String.valueOf(inventories.size())).replace("{1}", inv));
                 }
             } else {
-                if(CustomGUIMaker.sendMessages) {
+                if(CustomGUI.sendMessages) {
                     p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory <create / delete / edit / item / open / list>"));
                 }
             }
         } else {
-            if(CustomGUIMaker.sendMessages) {
+            if(CustomGUI.sendMessages) {
                 p.sendMessage(getMessage("wrong_arguments").replace("{0}", "/inventory <create / delete / edit / item / open / list>"));
             }
         }
@@ -355,7 +355,7 @@ public class Inventory implements CommandExecutor {
     public static String getMessage(String message) {
         String newMessage = null;
 
-        newMessage = CustomGUIMaker.Instance.getMessagesConfig().getString(CustomGUIMaker.language + ".messages." + message);
+        newMessage = CustomGUI.Instance.getMessagesConfig().getString(CustomGUI.language + ".messages." + message);
 
         return newMessage;
     }
