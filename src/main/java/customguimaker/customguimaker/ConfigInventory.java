@@ -15,64 +15,64 @@ import java.util.List;
 public class ConfigInventory {
 
     public static void setConfigItem(String inventory, Integer slot, ItemStack item) {
-        CustomGUIMaker.Instance.getInventoriesConfig().set("gui." + inventory + "." + slot + ".item", item);
+        CustomGUI.Instance.getInventoriesConfig().set("gui." + inventory + "." + slot + ".item", item);
 
         try {
-            CustomGUIMaker.Instance.getInventoriesConfig().save(CustomGUIMaker.inventoriesFile);
+            CustomGUI.Instance.getInventoriesConfig().save(CustomGUI.inventoriesFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public static ItemStack getConfigItem(String inventory, Integer slot) {
-        ItemStack item = CustomGUIMaker.Instance.getInventoriesConfig().getItemStack("gui." + inventory + "." + slot + ".item");
+        ItemStack item = CustomGUI.Instance.getInventoriesConfig().getItemStack("gui." + inventory + "." + slot + ".item");
 
         return item;
     }
 
     public static void setConfigCommand(String inventory, Integer slot, String command) {
-        CustomGUIMaker.Instance.getInventoriesConfig().set("gui." + inventory + "." + slot + ".command", command);
+        CustomGUI.Instance.getInventoriesConfig().set("gui." + inventory + "." + slot + ".command", command);
 
         try {
-            CustomGUIMaker.Instance.getInventoriesConfig().save(CustomGUIMaker.inventoriesFile);
+            CustomGUI.Instance.getInventoriesConfig().save(CustomGUI.inventoriesFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public static String getConfigCommand(String inventory, Integer slot) {
-        String command = CustomGUIMaker.Instance.getInventoriesConfig().getString("gui." + inventory + "." + slot + ".command");
+        String command = CustomGUI.Instance.getInventoriesConfig().getString("gui." + inventory + "." + slot + ".command");
 
         return command;
     }
 
     public static void setConfigGuiName(String inventory, String name) {
-        CustomGUIMaker.Instance.getInventoriesConfig().set("gui." + inventory + ".name", name);
+        CustomGUI.Instance.getInventoriesConfig().set("gui." + inventory + ".name", name);
 
         try {
-            CustomGUIMaker.Instance.getInventoriesConfig().save(CustomGUIMaker.inventoriesFile);
+            CustomGUI.Instance.getInventoriesConfig().save(CustomGUI.inventoriesFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public static String getConfigGuiName(String inventory) {
-        String name = CustomGUIMaker.Instance.getInventoriesConfig().getString("gui." + inventory + ".name");
+        String name = CustomGUI.Instance.getInventoriesConfig().getString("gui." + inventory + ".name");
 
         return name;
     }
     public static void setConfigGuiSize(String inventory, Integer size) {
-        CustomGUIMaker.Instance.getInventoriesConfig().set("gui." + inventory + ".size", size);
+        CustomGUI.Instance.getInventoriesConfig().set("gui." + inventory + ".size", size);
 
         try {
-            CustomGUIMaker.Instance.getInventoriesConfig().save(CustomGUIMaker.inventoriesFile);
+            CustomGUI.Instance.getInventoriesConfig().save(CustomGUI.inventoriesFile);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public static Integer getConfigGuiSize(String inventory) {
-        Integer size = CustomGUIMaker.Instance.getInventoriesConfig().getInt("gui." + inventory + ".size");
+        Integer size = CustomGUI.Instance.getInventoriesConfig().getInt("gui." + inventory + ".size");
 
         return size;
     }
