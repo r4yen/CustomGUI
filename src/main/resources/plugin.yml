@@ -6,5 +6,5 @@ authors: [ NeverAfK ]
 description: CustomGUIMaker
 commands:
   inventory:
-    description: Open/Edit/Setup Inventory GUIs
+    description: Open/Edit/Setup Inventory GUIs or edit Items.
     aliases: gui
