@@ -1,4 +1,4 @@
-package customguimaker.customguimaker;
+package customgui.customgui;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
