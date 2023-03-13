@@ -46,7 +46,7 @@ public class Inventory implements CommandExecutor {
             } else if(args[0].toLowerCase(Locale.ROOT).equals("edit")) {
                 if(args.length >= 2) {
                     if(args[1].toLowerCase(Locale.ROOT).equals("command")) {
-                        if(p.hasPermission("guimaker.*") || p.hasPermission("guimaker.edit_command") || p.isOp()) {
+                        if(p.hasPermission("customgui.*") || p.hasPermission("customgui.edit_command") || p.isOp()) {
                             if (args[2] != null) {
                                 if (InventoryTAB.allInventories("").size() >= 1 && InventoryTAB.allInventories("").contains(args[2].toLowerCase(Locale.ROOT))) {
                                     if (args[3] != null && args[4] != null && isNumeric(args[3])) {
@@ -78,7 +78,7 @@ public class Inventory implements CommandExecutor {
                             }
                         }
                     } else if (args[1].toLowerCase(Locale.ROOT).equals("gui")) {
-                        if(p.hasPermission("guimaker.*") || p.hasPermission("guimaker.edit_gui") || p.isOp()) {
+                        if(p.hasPermission("customgui.*") || p.hasPermission("customgui.edit_gui") || p.isOp()) {
                             if(args.length >= 3) {
                                 if(InventoryTAB.allInventories("").size() >= 1 && InventoryTAB.allInventories("").contains(args[1].toLowerCase(Locale.ROOT))) {
                                     org.bukkit.inventory.Inventory inv = ConfigInventory.getInventory(args[2].toLowerCase(Locale.ROOT), "§r", " §8(Editor)");
@@ -101,7 +101,7 @@ public class Inventory implements CommandExecutor {
                             }
                         }
                     } else if (args[1].toLowerCase(Locale.ROOT).equals("name")) {
-                        if(p.hasPermission("guimaker.*") || p.hasPermission("guimaker.edit_name") || p.isOp()) {
+                        if(p.hasPermission("customgui.*") || p.hasPermission("customgui.edit_name") || p.isOp()) {
                             if(args.length >= 4) {
                                 if(InventoryTAB.allInventories("").size() >= 1 && InventoryTAB.allInventories("").contains(args[1].toLowerCase(Locale.ROOT))) {
                                     String name = args[3];
@@ -142,7 +142,7 @@ public class Inventory implements CommandExecutor {
                     }
                 }
             } else if(args[0].toLowerCase(Locale.ROOT).equals("create")) {
-                if(p.hasPermission("guimaker.edit_gui") || p.hasPermission("guimaker.*") || p.isOp()) {
+                if(p.hasPermission("customgui.edit_gui") || p.hasPermission("customgui.*") || p.isOp()) {
                     if (args.length >= 3) {
                         if(args[2].equals("9") || args[2].equals("18") || args[2].equals("27") || args[2].equals("36") || args[2].equals("45") || args[2].equals("54")) {
                             Integer size = Integer.parseInt(args[2]);
@@ -168,7 +168,7 @@ public class Inventory implements CommandExecutor {
                     }
                 }
             } else if(args[0].toLowerCase(Locale.ROOT).equals("item")) {
-                if(p.hasPermission("guimaker.items") || p.hasPermission("guimaker.*") || p.isOp()) {
+                if(p.hasPermission("customgui.items") || p.hasPermission("customgui.*") || p.isOp()) {
                     if (args.length >= 2) {
                         if (args[1].toLowerCase(Locale.ROOT).equals("name")) {
                             if (args.length >= 3) {
@@ -282,7 +282,7 @@ public class Inventory implements CommandExecutor {
                 }
             } else if(args[0].toLowerCase(Locale.ROOT).equals("delete")) {
                 if(args.length >= 2) {
-                    if(p.hasPermission("guimaker.edit_gui") || p.hasPermission("guimaker.*") || p.isOp()) {
+                    if(p.hasPermission("customgui.edit_gui") || p.hasPermission("customgui.*") || p.isOp()) {
                         InventoryTAB.allInventories(null);
                         if (InventoryTAB.allInventories("").contains(args[1].toLowerCase(Locale.ROOT))) {
                             CustomGUI.Instance.getInventoriesConfig().set("gui." + args[1].toLowerCase(Locale.ROOT), null);
