@@ -1,6 +1,6 @@
-# CustomGUIMaker
+# CustomGUI
 
-* Create your own GUIs with CustomGUIMaker. Unlimited GUIs, own commands and easy use!
+* Create your own GUIs with CustomGUI. Unlimited GUIs, own commands and easy use!
 * This plugin is for **Bukkit / Spigot / Paper** (bukkit based) servers and for the **minecraft versions 1.8.x - 1.19.x**. 
 
 # Commands
@@ -50,23 +50,23 @@
 ### ``Without permissions``
 * /inventory open <gui> <br>
   
-### ``guimaker.edit_name``
+### ``customgui.edit_name``
 * /inventory edit name <gui> <name> <br>
 
-### ``guimaker.edit_command``
+### ``customgui.edit_command``
 * /inventory edit command <gui> <slot> <command> <br>
 
-### ``guimaker.edit_gui``
+### ``customgui.edit_gui``
 * /inventory edit command <gui> <slot> <command>
 * /inventory edit name <gui> <name>
 * /inventory edit gui <gui> <br>
 
-### ``guimaker.items``
+### ``customgui.items``
 * /inventory item lore add <text>
 * /inventory item lore clear
 * /inventory item name <text> <br>
 
-### ``guimaker.*`` / ``Server-Operator``
+### ``customgui.*`` / ``Server-Operator``
 * /inventory create <name> <size>
 
 * /inventory edit command <gui> <slot> <command>
