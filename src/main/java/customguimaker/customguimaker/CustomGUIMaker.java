@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Locale;
 
 public final class CustomGUI extends JavaPlugin {
-    public static CustomGUIMaker Instance = null;
+    public static CustomGUI Instance = null;
 
     public static HashMap<Player, String> editInventory = new HashMap<Player, String>();
     public static HashMap<Player, String> currentInventory = new HashMap<Player, String>();
@@ -34,11 +34,11 @@ public final class CustomGUI extends JavaPlugin {
             createMessagesConfig();
             createInventoriesConfig();
 
-            if(CustomGUIMaker.Instance.getServerConfig().getString("send-messages").toLowerCase(Locale.ROOT).equals("false")) {
+            if(CustomGUI.Instance.getServerConfig().getString("send-messages").toLowerCase(Locale.ROOT).equals("false")) {
                 sendMessages = false;
             }
 
-            language = CustomGUIMaker.Instance.getServerConfig().getString("language");
+            language = CustomGUI.Instance.getServerConfig().getString("language");
 
             this.getCommand("inventory").setExecutor(new Inventory());
 
@@ -51,11 +51,11 @@ public final class CustomGUI extends JavaPlugin {
             createMessagesConfig();
             createInventoriesConfig();
 
-            if(CustomGUIMaker.Instance.getServerConfig().getString("send-messages").toLowerCase(Locale.ROOT).equals("false")) {
+            if(CustomGUI.Instance.getServerConfig().getString("send-messages").toLowerCase(Locale.ROOT).equals("false")) {
                 sendMessages = false;
             }
 
-            language = CustomGUIMaker.Instance.getServerConfig().getString("language");
+            language = CustomGUI.Instance.getServerConfig().getString("language");
 
             this.getCommand("inventory").setExecutor(new Inventory());
             if(getServerConfig().getString("tab-completer").toLowerCase(Locale.ROOT).equals("true")) {
