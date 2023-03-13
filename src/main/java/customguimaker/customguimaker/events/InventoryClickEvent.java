@@ -19,7 +19,7 @@ public class InventoryClickEvent implements Listener {
 
             String command = ConfigInventory.getConfigCommand(CustomGUI.currentInventory.get(p), slot);
 
-            customguimaker.customguimaker.Player.sendCommand(p, command);
+            customgui.customgui.Player.sendCommand(p, command);
         }
     }
 }
