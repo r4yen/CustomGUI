@@ -1,6 +1,6 @@
-package customguimaker.customguimaker.commands;
+package customgui.customgui.commands;
 
-import customguimaker.customguimaker.CustomGUIMaker;
+import customgui.customgui.CustomGUI;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
@@ -207,11 +207,11 @@ public class InventoryTAB implements TabCompleter {
         if(currentInput == null) {
             List<String> allInventories = new ArrayList<String>();
 
-            if(CustomGUIMaker.Instance.getInventoriesConfig().getConfigurationSection("gui") == null) {
+            if(CustomGUI.Instance.getInventoriesConfig().getConfigurationSection("gui") == null) {
                 return allInventories;
             }
 
-            for (String key : CustomGUIMaker.Instance.getInventoriesConfig().getConfigurationSection("gui").getKeys(false)) {
+            for (String key : CustomGUI.Instance.getInventoriesConfig().getConfigurationSection("gui").getKeys(false)) {
                 allInventories.add(key);
             }
 
@@ -219,13 +219,13 @@ public class InventoryTAB implements TabCompleter {
         }
         List<String> allInventories = new ArrayList<String>();
 
-        if(CustomGUIMaker.Instance.getInventoriesConfig().getConfigurationSection("gui") == null) {
+        if(CustomGUI.Instance.getInventoriesConfig().getConfigurationSection("gui") == null) {
             allInventories.add(getTab("no_inventory_found"));
 
             return allInventories;
         }
 
-        for (String key : CustomGUIMaker.Instance.getInventoriesConfig().getConfigurationSection("gui").getKeys(false)) {
+        for (String key : CustomGUI.Instance.getInventoriesConfig().getConfigurationSection("gui").getKeys(false)) {
             if(key != null) {
                 if(key.startsWith(currentInput)) {
                     allInventories.add(key);
@@ -233,7 +233,7 @@ public class InventoryTAB implements TabCompleter {
             }
         }
 
-        for (String key : CustomGUIMaker.Instance.getInventoriesConfig().getConfigurationSection("gui").getKeys(false)) {
+        for (String key : CustomGUI.Instance.getInventoriesConfig().getConfigurationSection("gui").getKeys(false)) {
             if(key != null) {
                 if(key.contains(currentInput) && !(key.startsWith(currentInput))) {
                     allInventories.add(key);
@@ -245,6 +245,6 @@ public class InventoryTAB implements TabCompleter {
     }
 
     public static String getTab(String tab) {
-        return CustomGUIMaker.Instance.getMessagesConfig().getString(CustomGUIMaker.language + ".tab." + tab);
+        return CustomGUI.Instance.getMessagesConfig().getString(CustomGUI.language + ".tab." + tab);
     }
 }
